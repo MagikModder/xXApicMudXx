@@ -1,0 +1,33 @@
+
+}
+
+static class ItemChicasCupcake extends Item{
+
+public ItemChicasCupcake (int par1){
+setMaxDamage(7);
+maxStackSize = 1;
+setUnlocalizedName("Chica's Cupcake (Weapon)");
+setTextureName("");
+setCreativeTab(CreativeTabs.tabTools);
+}
+public int getItemEnchantability()
+{
+    return 1;
+}
+public int getMaxItemUseDuration(ItemStack par1ItemStack)
+{
+    return 2000;
+}
+public float getStrVsBlock(ItemStack par1ItemStack, Block par2Block)
+{
+    return 1.5F;
+}
+public boolean canHarvestBlock(Block par1Block)
+{
+    return true;
+}
+
+
+
+
+}}
