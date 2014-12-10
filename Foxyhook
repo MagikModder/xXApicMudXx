@@ -1,0 +1,62 @@
+package com.example.examplemod;
+//Coded By T0psid3
+import cpw.mods.fml.common.event.*;
+import net.minecraft.block.*;
+import net.minecraft.creativetab.*;
+import net.minecraft.item.*;
+import net.minecraft.world.*;
+import java.util.*;
+
+
+
+public class foxysHook{
+
+public foxysHook(){}
+
+public static Item block;public static Object instance;public void load(){
+}
+public void generateNether(World world, Random random, int chunkX, int chunkZ){}
+public void generateSurface(World world, Random random, int chunkX, int chunkZ){}
+public int addFuel(ItemStack fuel){return 0;}
+public void serverLoad(FMLServerStartingEvent event){}
+public void preInit(FMLPreInitializationEvent event){}
+public void registerRenderers(){
+}
+
+
+static{
+block = (new ItemfoxysHook(500));
+Item.itemRegistry.addObject(500, "FoxysHook", block);
+
+}
+
+static class ItemfoxysHook extends Item{
+
+public ItemfoxysHook(int par1){
+setMaxDamage(7);
+maxStackSize = 1;
+setUnlocalizedName("Foxy's Weapon");
+setTextureName("Foxy's Hook");
+setCreativeTab(CreativeTabs.tabTools);
+}
+public int getItemEnchantability()
+{
+    return 1;
+}
+public int getMaxItemUseDuration(ItemStack par1ItemStack)
+{
+    return 2000;
+}
+public float getStrVsBlock(ItemStack par1ItemStack, Block par2Block)
+{
+    return 1.5F;
+}
+public boolean canHarvestBlock(Block par1Block)
+{
+    return true;
+}
+
+
+
+
+}}
